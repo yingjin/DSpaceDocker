@@ -9,12 +9,12 @@ Under DSpaceDocker, there is a dspace directory. Please place DSpace downloaded 
   - cd DSpace 
   - git checkout imagineRio-dspace-6.x 
   
-Download assetstore and place it under DSpace directory
-  - git clone https://github.com/yingjin/assetstore.git   // this may take a while 
+Download assetstore and place it under DSpace directory; this may take a while.
+  - git clone https://github.com/yingjin/assetstore.git    
 
 Back to DSpaceDocker dir which has the dspace-compose.yml file available. Run following command:
 
-  - docker-compose -p d6 -f docker-compose.yml -f d6.override.yml -f src.override.yml up -d . 
+  - docker-compose -p d6 -f docker-compose.yml -f d6.override.yml -f src.override.yml up -d
 
 Access the DSpace at http://localhost:8080/xmlui. The rest api is available at http://localhost:8080/xmlui.
 
