@@ -19,4 +19,19 @@ Back to DSpaceDocker dir which has the dspace-compose.yml file available. Run fo
 Access the DSpace at http://localhost:8080/xmlui. The rest api is available at http://localhost:8080/xmlui.
 
 
+To take the site down, you need to run
 
+  - docker-compose -p d6 -f docker-compose.yml -f d6.override.yml -f src.override.yml down
+  
+To remove images, you can do
+  - docker image prune
+  
+It's likely images are still there and you have to remove them one by one. 
+You can do 
+  - docker image ls -a
+  - docker rmi <imageID>
+  
+Then, last, if you want to clean all the volumes,
+  - docker volume prune
+  
+  
